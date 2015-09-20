@@ -45,18 +45,6 @@
     [self.moviePlayer prepareToPlay];
 }
 
-//- (IBAction)playMovie:(id)sender {
-//    NSString *videoPath = [[NSBundle mainBundle] pathForResource:@"movie" ofType:@"mp4"];
-//    self.moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:[NSURL fileURLWithPath:videoPath]];
-//    [self.moviePlayer.view setFrame:CGRectMake(100, 200, 500, 400)];
-//    [self.view addSubview:self.moviePlayer.view];
-//    self.moviePlayer.fullscreen = YES;
-//    self.moviePlayer.allowsAirPlay = YES;
-//    
-//    [self.moviePlayer play];
-//}
-
-
 /*
 #pragma mark - Navigation
 
