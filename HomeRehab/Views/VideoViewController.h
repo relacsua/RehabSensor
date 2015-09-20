@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  VideoViewController.h
 //  HomeRehab
 //
 //  Created by Muhammad Muneer on 20/9/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface VideoViewController : UIViewController
 
 @end
-
