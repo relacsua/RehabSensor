@@ -4,44 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
-        <scene sceneID="d85-Uw-CWC">
-            <objects>
-                <viewController id="Zne-WB-hmj" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6MA-Le-aC4"/>
-                        <viewControllerLayoutGuide type="bottom" id="ar7-Yx-AFF"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zmM-pE-QEi">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="IKX-Q6-PVL"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bMY-D0-Kip" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-154" y="279"/>
-        </scene>
-        <!--Item 1-->
-        <scene sceneID="UQu-Od-3tf">
-            <objects>
-                <viewController id="3WN-F6-2Up" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="VKg-mv-8f3"/>
-                        <viewControllerLayoutGuide type="bottom" id="MqG-NG-DmE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="hcG-dH-tK9">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="CE9-AY-XwO"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="quy-Ur-rsa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-154" y="-384"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="81p-8i-vUK">
             <objects>
@@ -53,13 +15,108 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="3WN-F6-2Up" kind="relationship" relationship="viewControllers" id="ti5-Nz-rd4"/>
-                        <segue destination="Zne-WB-hmj" kind="relationship" relationship="viewControllers" id="1LQ-HE-tnn"/>
+                        <segue destination="zPy-Qd-JpD" kind="relationship" relationship="viewControllers" id="1uD-Jt-EIX"/>
+                        <segue destination="pVr-wq-5yE" kind="relationship" relationship="viewControllers" id="twZ-zw-2Cg"/>
+                        <segue destination="qDe-eD-fPJ" kind="relationship" relationship="viewControllers" id="ivW-c8-8Kq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vAa-eh-6kP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-974" y="-54"/>
+            <point key="canvasLocation" x="-1554" y="-54"/>
+        </scene>
+        <!--Information-->
+        <scene sceneID="5Du-OA-U0u">
+            <objects>
+                <viewController id="zPy-Qd-JpD" customClass="InfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vqh-Rk-G3Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Wz-rG-Xes"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XAf-OE-g38">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="FYP Mini Assigment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yP-Ju-mGi">
+                                <rect key="frame" x="118" y="232" width="365" height="106"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="40"/>
+                                <color key="textColor" red="0.80000001192092896" green="0.40000000596046448" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Information page" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1Y-3Z-bpS">
+                                <rect key="frame" x="235" y="346" width="131" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="7yP-Ju-mGi" secondAttribute="centerY" id="Q3T-K8-5Ji"/>
+                            <constraint firstItem="L1Y-3Z-bpS" firstAttribute="top" secondItem="7yP-Ju-mGi" secondAttribute="bottom" constant="8" id="WXD-87-c8r"/>
+                            <constraint firstAttribute="centerX" secondItem="L1Y-3Z-bpS" secondAttribute="centerX" id="lLv-Kw-pSc"/>
+                            <constraint firstAttribute="centerX" secondItem="7yP-Ju-mGi" secondAttribute="centerX" id="oJO-HL-DVn"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Information" image="InfoTabImage" id="C4q-TF-6gT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hjO-LJ-BbQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-142" y="-696"/>
+        </scene>
+        <!--Video-->
+        <scene sceneID="1bh-gH-3Nd">
+            <objects>
+                <viewController id="pVr-wq-5yE" customClass="VideoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="coJ-p9-yLL"/>
+                        <viewControllerLayoutGuide type="bottom" id="JTO-c2-1G3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7db-3J-byy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Video Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQQ-i3-bMi">
+                                <rect key="frame" x="204" y="60" width="192" height="62"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="40"/>
+                                <color key="textColor" red="0.80000001192092896" green="0.40000000596046448" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="JQQ-i3-bMi" secondAttribute="centerX" id="pwQ-jk-8AH"/>
+                            <constraint firstItem="JQQ-i3-bMi" firstAttribute="top" secondItem="coJ-p9-yLL" secondAttribute="bottom" constant="40" id="xCF-RR-RAD"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Video" image="VideoTabImage" id="0qA-E5-n6r"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A1f-1Y-dVm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762" y="-678"/>
+        </scene>
+        <!--Bluetooth-->
+        <scene sceneID="Y74-Um-ZY8">
+            <objects>
+                <viewController id="qDe-eD-fPJ" customClass="BluetoothViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oHi-OF-zCD"/>
+                        <viewControllerLayoutGuide type="bottom" id="YEa-hu-Vzh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QeD-Xi-wxB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Bluetooth" image="BluetoothTabImage" id="7y9-2O-caC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4LT-Sg-Q0J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-142" y="507"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BluetoothTabImage" width="32" height="54"/>
+        <image name="InfoTabImage" width="44" height="44"/>
+        <image name="VideoTabImage" width="58" height="40"/>
+    </resources>
 </document>

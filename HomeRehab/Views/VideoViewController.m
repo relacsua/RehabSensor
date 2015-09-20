@@ -9,13 +9,14 @@
 #import "VideoViewController.h"
 
 @interface VideoViewController ()
-
+@property (nonatomic, strong) MPMoviePlayerController * moviePlayer;
 @end
 
 @implementation VideoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self initMoviePlayer];
     // Do any additional setup after loading the view.
 }
 
@@ -23,6 +24,38 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void) initMoviePlayer {
+    
+    // Measurements for centering video.
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+    CGFloat videoHeight = 720/2;
+    CGFloat videoWidth = 1080/2;
+    
+    // Instantiating video and adding it to the screen
+    NSString *videoPath = [[NSBundle mainBundle] pathForResource:@"movie" ofType:@"mp4"];
+    self.moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:[NSURL fileURLWithPath:videoPath]];
+    [self.view addSubview:self.moviePlayer.view];
+    [self.moviePlayer.view setFrame:CGRectMake((screenWidth - videoWidth)/2, (screenHeight - videoHeight)/2, videoWidth, videoHeight)];
+    [self.moviePlayer setShouldAutoplay:NO];
+    self.moviePlayer.fullscreen = YES;
+    self.moviePlayer.allowsAirPlay = YES;
+    [self.moviePlayer prepareToPlay];
+}
+
+//- (IBAction)playMovie:(id)sender {
+//    NSString *videoPath = [[NSBundle mainBundle] pathForResource:@"movie" ofType:@"mp4"];
+//    self.moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:[NSURL fileURLWithPath:videoPath]];
+//    [self.moviePlayer.view setFrame:CGRectMake(100, 200, 500, 400)];
+//    [self.view addSubview:self.moviePlayer.view];
+//    self.moviePlayer.fullscreen = YES;
+//    self.moviePlayer.allowsAirPlay = YES;
+//    
+//    [self.moviePlayer play];
+//}
+
 
 /*
 #pragma mark - Navigation
