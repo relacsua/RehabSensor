@@ -20,6 +20,7 @@
 		DA57B5501BAEC6ED0019C008 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA57B54F1BAEC6ED0019C008 /* MediaPlayer.framework */; };
 		DA57B5531BAECC5F0019C008 /* MadgwickAHRS.c in Frameworks */ = {isa = PBXBuildFile; fileRef = DA57B5511BAECC5F0019C008 /* MadgwickAHRS.c */; };
 		DA57B5541BAECC5F0019C008 /* MadgwickAHRS.h in Frameworks */ = {isa = PBXBuildFile; fileRef = DA57B5521BAECC5F0019C008 /* MadgwickAHRS.h */; };
+		DA57B5561BAEE5090019C008 /* movie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DA57B5551BAEE5090019C008 /* movie.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		DA57B54F1BAEC6ED0019C008 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		DA57B5511BAECC5F0019C008 /* MadgwickAHRS.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = MadgwickAHRS.c; path = HomeRehab/Helper/MadgwickAHRS.c; sourceTree = "<group>"; };
 		DA57B5521BAECC5F0019C008 /* MadgwickAHRS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MadgwickAHRS.h; path = HomeRehab/Helper/MadgwickAHRS.h; sourceTree = "<group>"; };
+		DA57B5551BAEE5090019C008 /* movie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = movie.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		DA57B5121BAEC2070019C008 = {
 			isa = PBXGroup;
 			children = (
+				DA57B5551BAEE5090019C008 /* movie.mp4 */,
 				DA57B5511BAECC5F0019C008 /* MadgwickAHRS.c */,
 				DA57B5521BAECC5F0019C008 /* MadgwickAHRS.h */,
 				DA57B54F1BAEC6ED0019C008 /* MediaPlayer.framework */,
@@ -225,6 +228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA57B5561BAEE5090019C008 /* movie.mp4 in Resources */,
 				DA57B52A1BAEC2080019C008 /* Main.storyboard in Resources */,
 				DA57B52F1BAEC2080019C008 /* LaunchScreen.xib in Resources */,
 				DA57B52C1BAEC2080019C008 /* Images.xcassets in Resources */,
