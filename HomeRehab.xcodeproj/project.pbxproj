@@ -18,9 +18,10 @@
 		DA57B54C1BAEC6B40019C008 /* BluetoothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA57B54B1BAEC6B40019C008 /* BluetoothViewController.m */; };
 		DA57B54E1BAEC6D10019C008 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA57B54D1BAEC6D10019C008 /* CoreBluetooth.framework */; };
 		DA57B5501BAEC6ED0019C008 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA57B54F1BAEC6ED0019C008 /* MediaPlayer.framework */; };
-		DA57B5531BAECC5F0019C008 /* MadgwickAHRS.c in Frameworks */ = {isa = PBXBuildFile; fileRef = DA57B5511BAECC5F0019C008 /* MadgwickAHRS.c */; };
-		DA57B5541BAECC5F0019C008 /* MadgwickAHRS.h in Frameworks */ = {isa = PBXBuildFile; fileRef = DA57B5521BAECC5F0019C008 /* MadgwickAHRS.h */; };
 		DA57B5561BAEE5090019C008 /* movie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DA57B5551BAEE5090019C008 /* movie.mp4 */; };
+		DA57B5591BAF74240019C008 /* Sensor.m in Sources */ = {isa = PBXBuildFile; fileRef = DA57B5581BAF74240019C008 /* Sensor.m */; };
+		DA57B55B1BB0399D0019C008 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA57B55A1BB0399D0019C008 /* GLKit.framework */; };
+		DA57B55C1BB062420019C008 /* MadgwickAHRS.c in Sources */ = {isa = PBXBuildFile; fileRef = DA57B5511BAECC5F0019C008 /* MadgwickAHRS.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,9 @@
 		DA57B5511BAECC5F0019C008 /* MadgwickAHRS.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = MadgwickAHRS.c; path = HomeRehab/Helper/MadgwickAHRS.c; sourceTree = "<group>"; };
 		DA57B5521BAECC5F0019C008 /* MadgwickAHRS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MadgwickAHRS.h; path = HomeRehab/Helper/MadgwickAHRS.h; sourceTree = "<group>"; };
 		DA57B5551BAEE5090019C008 /* movie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = movie.mp4; sourceTree = "<group>"; };
+		DA57B5571BAF74240019C008 /* Sensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sensor.h; path = Helper/Sensor.h; sourceTree = "<group>"; };
+		DA57B5581BAF74240019C008 /* Sensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Sensor.m; path = Helper/Sensor.m; sourceTree = "<group>"; };
+		DA57B55A1BB0399D0019C008 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA57B5531BAECC5F0019C008 /* MadgwickAHRS.c in Frameworks */,
-				DA57B5541BAECC5F0019C008 /* MadgwickAHRS.h in Frameworks */,
+				DA57B55B1BB0399D0019C008 /* GLKit.framework in Frameworks */,
 				DA57B5501BAEC6ED0019C008 /* MediaPlayer.framework in Frameworks */,
 				DA57B54E1BAEC6D10019C008 /* CoreBluetooth.framework in Frameworks */,
 			);
@@ -83,6 +86,7 @@
 		DA57B5121BAEC2070019C008 = {
 			isa = PBXGroup;
 			children = (
+				DA57B55A1BB0399D0019C008 /* GLKit.framework */,
 				DA57B5551BAEE5090019C008 /* movie.mp4 */,
 				DA57B5511BAECC5F0019C008 /* MadgwickAHRS.c */,
 				DA57B5521BAECC5F0019C008 /* MadgwickAHRS.h */,
@@ -114,6 +118,8 @@
 				DA57B5481BAEC6540019C008 /* VideoViewController.m */,
 				DA57B54A1BAEC6B40019C008 /* BluetoothViewController.h */,
 				DA57B54B1BAEC6B40019C008 /* BluetoothViewController.m */,
+				DA57B5571BAF74240019C008 /* Sensor.h */,
+				DA57B5581BAF74240019C008 /* Sensor.m */,
 				DA57B5451BAEC6320019C008 /* InfoViewController.m */,
 				DA57B52B1BAEC2080019C008 /* Images.xcassets */,
 				DA57B52D1BAEC2080019C008 /* LaunchScreen.xib */,
@@ -249,11 +255,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA57B55C1BB062420019C008 /* MadgwickAHRS.c in Sources */,
 				DA57B5241BAEC2080019C008 /* AppDelegate.m in Sources */,
 				DA57B54C1BAEC6B40019C008 /* BluetoothViewController.m in Sources */,
 				DA57B5211BAEC2080019C008 /* main.m in Sources */,
 				DA57B5491BAEC6540019C008 /* VideoViewController.m in Sources */,
 				DA57B5461BAEC6320019C008 /* InfoViewController.m in Sources */,
+				DA57B5591BAF74240019C008 /* Sensor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
