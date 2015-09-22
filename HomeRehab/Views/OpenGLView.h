@@ -18,6 +18,13 @@
     GLuint _positionSlot;
     GLuint _colorSlot;
     GLuint _projectionUniform;
+    GLuint _modelViewUniform;
+    GLuint _depthRenderBuffer;
+    float _yaw;
+    float _pitch;
+    float _roll;
 }
+
+- (void) setYawPitchRoll:(float) yaw pitch:(float)pitch roll:(float)roll;
 
 @end

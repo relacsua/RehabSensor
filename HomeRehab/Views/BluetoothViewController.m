@@ -195,6 +195,10 @@
     
     [Sensor getYawPitchRoll:acc_x accY:acc_y accZ:acc_z magX:mag_x magY:mag_y magZ:mag_z gyroX:gyro_x gyroY:gyro_y gyroZ:gyro_z yaw:&yaw pitch:&pitch roll:&roll];
     
+    yaw = GLKMathRadiansToDegrees(yaw);
+    pitch = GLKMathRadiansToDegrees(pitch);
+    roll = GLKMathRadiansToDegrees(roll);
+    
     self.accX.text = [[NSString alloc] initWithFormat:@"Ax: %.2f", acc_x];
     self.accY.text = [[NSString alloc] initWithFormat:@"Ay: %.2f", acc_y];
     self.accZ.text = [[NSString alloc] initWithFormat:@"Az: %.2f", acc_z];
@@ -210,6 +214,8 @@
     self.yawLabel.text = [[NSString alloc] initWithFormat:@"Yaw: %.2f", yaw];
     self.pitchLabel.text = [[NSString alloc] initWithFormat:@"Pitch: %.2f", pitch];
     self.rollLabel.text = [[NSString alloc] initWithFormat:@"Roll: %.2f", roll];
+    
+    [self.glView setYawPitchRoll:yaw pitch:pitch roll:roll];
     
 }
 

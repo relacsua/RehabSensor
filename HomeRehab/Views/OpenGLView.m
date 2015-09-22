@@ -17,16 +17,42 @@ typedef struct {
 } Vertex;
 
 const Vertex Vertices[] = {
-    {{1, -1, -7}, {1, 0, 0, 1}},
-    {{1, 1, -7}, {0, 1, 0, 1}},
-    {{-1, 1, -7}, {0, 0, 1, 1}},
-    {{-1, -1, -7}, {0, 0, 0, 1}}
+    {{0.5, -0.5, 0.5}, {1, 0, 0, 1}}, //front, bottom right
+    {{0.5, 0.5, 0.5}, {1, 0, 0, 1}}, // front, top right
+    {{-0.5, 0.5, 0.5}, {0, 1, 0, 1}}, // front top left
+    {{-0.5, -0.5, 0.5}, {0, 1, 0, 1}}, // front bottom left
+    {{0.5, -0.5, -0.5}, {1, 0, 0, 1}}, // back bottom right
+    {{0.5, 0.5, -0.5}, {1, 0, 0, 1}}, // back top right
+    {{-0.5, 0.5, -0.5}, {0, 1, 0, 1}}, // back top left
+    {{-0.5, -0.5, -0.5}, {0, 1, 0, 1}} // back bottom left
 };
 
 const GLubyte Indices[] = {
+    // Front
     0, 1, 2,
-    2, 3, 0
+    2, 3, 0,
+    // Back
+    4, 6, 5,
+    4, 7, 6,
+    // Left
+    2, 7, 3,
+    7, 6, 2,
+    // Right
+    0, 4, 1,
+    4, 1, 5,
+    // Top
+    6, 2, 1,
+    1, 6, 5,
+    // Bottom
+    0, 3, 7,
+    0, 7, 4
 };
+
+- (void) setYawPitchRoll:(float)yaw pitch:(float)pitch roll:(float)roll {
+    _yaw = yaw;
+    _pitch = pitch;
+    _roll = roll;
+}
 
 + (Class)layerClass {
     return [CAEAGLLayer class];
@@ -57,22 +83,36 @@ const GLubyte Indices[] = {
     [_context renderbufferStorage:GL_RENDERBUFFER fromDrawable:_eaglLayer];
 }
 
+- (void)setupDepthBuffer {
+    glGenRenderbuffers(1, &_depthRenderBuffer);
+    glBindRenderbuffer(GL_RENDERBUFFER, _depthRenderBuffer);
+    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT16, self.frame.size.width, self.frame.size.height);
+}
+
 - (void)setupFrameBuffer {
     GLuint framebuffer;
     glGenFramebuffers(1, &framebuffer);
     glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
     glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0,
                               GL_RENDERBUFFER, _colorRenderBuffer);
+    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, _depthRenderBuffer);
 }
 
-- (void)render {
+- (void)render:(CADisplayLink*)displayLink {
     glClearColor(0, 104.0/255.0, 55.0/255.0, 1.0);
-    glClear(GL_COLOR_BUFFER_BIT);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glEnable(GL_DEPTH_TEST);
     
     CC3GLMatrix *projection = [CC3GLMatrix matrix];
     float h = 4.0f * self.frame.size.height / self.frame.size.width;
     [projection populateFromFrustumLeft:-2 andRight:2 andBottom:-h/2 andTop:h/2 andNear:4 andFar:10];
     glUniformMatrix4fv(_projectionUniform, 1, 0, projection.glMatrix);
+    
+    CC3GLMatrix *modelView = [CC3GLMatrix matrix];
+    [modelView populateFromTranslation:CC3VectorMake(0, 0, -7)];
+    NSLog(@"y: %f, p: %f, r: %f", _yaw, _pitch, _roll);
+    [modelView rotateBy:CC3VectorMake(_pitch, _roll, _yaw)];
+    glUniformMatrix4fv(_modelViewUniform, 1, 0, modelView.glMatrix);
     
     glViewport(0, 0, self.frame.size.width, self.frame.size.height);
     
@@ -150,6 +190,7 @@ const GLubyte Indices[] = {
     glEnableVertexAttribArray(_positionSlot);
     glEnableVertexAttribArray(_colorSlot);
     _projectionUniform = glGetUniformLocation(programHandle, "Projection");
+    _modelViewUniform = glGetUniformLocation(programHandle, "Modelview");
 }
 
 - (void)setupVBOs {
@@ -166,17 +207,23 @@ const GLubyte Indices[] = {
     
 }
 
+- (void)setupDisplayLink {
+    CADisplayLink* displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(render:)];
+    [displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+}
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         [self setupLayer];
         [self setupContext];
+        [self setupDepthBuffer];
         [self setupRenderBuffer];
         [self setupFrameBuffer];
         [self compileShaders];
         [self setupVBOs];
-        [self render];
+        [self setupDisplayLink];
     }
     return self;
 }
