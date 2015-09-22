@@ -13,6 +13,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Sensor.h"
+#import "OpenGLView.h"
 @import CoreBluetooth;
 
 @interface BluetoothViewController : UIViewController <CBCentralManagerDelegate, CBPeripheralDelegate>

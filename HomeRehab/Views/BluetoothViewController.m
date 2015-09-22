@@ -33,6 +33,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *pitchLabel;
 @property (weak, nonatomic) IBOutlet UILabel *rollLabel;
 
+// View to add the graphics
+@property (nonatomic, retain) IBOutlet OpenGLView *glView;
+
 // Objects required for bluetooth protocol
 @property (nonatomic, strong) CBCentralManager *centralManager;
 @property (nonatomic, strong) CBPeripheral *peripheral;
@@ -44,11 +47,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//     Scan for home rehab sensor
-//    NSArray *service = @[[CBUUID UUIDWithString:HOME_REHAB_SENSOR_SERVICE_UUID]];
+    // Scan for home rehab sensor
     CBCentralManager *centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
     self.centralManager = centralManager;
     self.peripheralFound = NO;
+    
+    // Add OpenGLView
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height - 510;
+    self.glView = [[OpenGLView alloc] initWithFrame:CGRectMake(0, 510, screenWidth, screenHeight)]; 
+    [self.view addSubview:_glView];
 }
 
 - (void)didReceiveMemoryWarning {

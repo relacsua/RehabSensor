@@ -22,6 +22,15 @@
 		DA57B5591BAF74240019C008 /* Sensor.m in Sources */ = {isa = PBXBuildFile; fileRef = DA57B5581BAF74240019C008 /* Sensor.m */; };
 		DA57B55B1BB0399D0019C008 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA57B55A1BB0399D0019C008 /* GLKit.framework */; };
 		DA57B55C1BB062420019C008 /* MadgwickAHRS.c in Sources */ = {isa = PBXBuildFile; fileRef = DA57B5511BAECC5F0019C008 /* MadgwickAHRS.c */; };
+		DA57B55E1BB0F14D0019C008 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA57B55D1BB0F14D0019C008 /* OpenGLES.framework */; };
+		DA57B5601BB0F15A0019C008 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA57B55F1BB0F15A0019C008 /* QuartzCore.framework */; };
+		DA57B5631BB0F1CD0019C008 /* OpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA57B5621BB0F1CD0019C008 /* OpenGLView.m */; };
+		DA57B5651BB0FA0A0019C008 /* SimpleVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = DA57B5641BB0FA0A0019C008 /* SimpleVertex.glsl */; };
+		DA57B5671BB0FAA20019C008 /* SimpleFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = DA57B5661BB0FAA20019C008 /* SimpleFragment.glsl */; };
+		DA57B5721BB0FF6B0019C008 /* CC3Foundation.m in Sources */ = {isa = PBXBuildFile; fileRef = DA57B5691BB0FF6B0019C008 /* CC3Foundation.m */; };
+		DA57B5731BB0FF6B0019C008 /* CC3GLMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = DA57B56B1BB0FF6B0019C008 /* CC3GLMatrix.m */; };
+		DA57B5741BB0FF6B0019C008 /* CC3Kazmath.c in Sources */ = {isa = PBXBuildFile; fileRef = DA57B56C1BB0FF6B0019C008 /* CC3Kazmath.c */; };
+		DA57B5751BB0FF6B0019C008 /* CC3Math.m in Sources */ = {isa = PBXBuildFile; fileRef = DA57B5701BB0FF6B0019C008 /* CC3Math.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +69,22 @@
 		DA57B5571BAF74240019C008 /* Sensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sensor.h; path = Helper/Sensor.h; sourceTree = "<group>"; };
 		DA57B5581BAF74240019C008 /* Sensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Sensor.m; path = Helper/Sensor.m; sourceTree = "<group>"; };
 		DA57B55A1BB0399D0019C008 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		DA57B55D1BB0F14D0019C008 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		DA57B55F1BB0F15A0019C008 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DA57B5611BB0F1CD0019C008 /* OpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenGLView.h; path = Views/OpenGLView.h; sourceTree = "<group>"; };
+		DA57B5621BB0F1CD0019C008 /* OpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenGLView.m; path = Views/OpenGLView.m; sourceTree = "<group>"; };
+		DA57B5641BB0FA0A0019C008 /* SimpleVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SimpleVertex.glsl; sourceTree = "<group>"; };
+		DA57B5661BB0FAA20019C008 /* SimpleFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SimpleFragment.glsl; sourceTree = "<group>"; };
+		DA57B5681BB0FF6B0019C008 /* CC3Foundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC3Foundation.h; sourceTree = "<group>"; };
+		DA57B5691BB0FF6B0019C008 /* CC3Foundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CC3Foundation.m; sourceTree = "<group>"; };
+		DA57B56A1BB0FF6B0019C008 /* CC3GLMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC3GLMatrix.h; sourceTree = "<group>"; };
+		DA57B56B1BB0FF6B0019C008 /* CC3GLMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CC3GLMatrix.m; sourceTree = "<group>"; };
+		DA57B56C1BB0FF6B0019C008 /* CC3Kazmath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CC3Kazmath.c; sourceTree = "<group>"; };
+		DA57B56D1BB0FF6B0019C008 /* CC3Kazmath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC3Kazmath.h; sourceTree = "<group>"; };
+		DA57B56E1BB0FF6B0019C008 /* CC3Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC3Logging.h; sourceTree = "<group>"; };
+		DA57B56F1BB0FF6B0019C008 /* CC3Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC3Math.h; sourceTree = "<group>"; };
+		DA57B5701BB0FF6B0019C008 /* CC3Math.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CC3Math.m; sourceTree = "<group>"; };
+		DA57B5711BB0FF6B0019C008 /* ccTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ccTypes.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA57B5601BB0F15A0019C008 /* QuartzCore.framework in Frameworks */,
+				DA57B55E1BB0F14D0019C008 /* OpenGLES.framework in Frameworks */,
 				DA57B55B1BB0399D0019C008 /* GLKit.framework in Frameworks */,
 				DA57B5501BAEC6ED0019C008 /* MediaPlayer.framework in Frameworks */,
 				DA57B54E1BAEC6D10019C008 /* CoreBluetooth.framework in Frameworks */,
@@ -86,6 +113,8 @@
 		DA57B5121BAEC2070019C008 = {
 			isa = PBXGroup;
 			children = (
+				DA57B55F1BB0F15A0019C008 /* QuartzCore.framework */,
+				DA57B55D1BB0F14D0019C008 /* OpenGLES.framework */,
 				DA57B55A1BB0399D0019C008 /* GLKit.framework */,
 				DA57B5551BAEE5090019C008 /* movie.mp4 */,
 				DA57B5511BAECC5F0019C008 /* MadgwickAHRS.c */,
@@ -118,6 +147,8 @@
 				DA57B5481BAEC6540019C008 /* VideoViewController.m */,
 				DA57B54A1BAEC6B40019C008 /* BluetoothViewController.h */,
 				DA57B54B1BAEC6B40019C008 /* BluetoothViewController.m */,
+				DA57B5611BB0F1CD0019C008 /* OpenGLView.h */,
+				DA57B5621BB0F1CD0019C008 /* OpenGLView.m */,
 				DA57B5571BAF74240019C008 /* Sensor.h */,
 				DA57B5581BAF74240019C008 /* Sensor.m */,
 				DA57B5451BAEC6320019C008 /* InfoViewController.m */,
@@ -131,6 +162,18 @@
 		DA57B51E1BAEC2080019C008 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DA57B5681BB0FF6B0019C008 /* CC3Foundation.h */,
+				DA57B5691BB0FF6B0019C008 /* CC3Foundation.m */,
+				DA57B56A1BB0FF6B0019C008 /* CC3GLMatrix.h */,
+				DA57B56B1BB0FF6B0019C008 /* CC3GLMatrix.m */,
+				DA57B56C1BB0FF6B0019C008 /* CC3Kazmath.c */,
+				DA57B56D1BB0FF6B0019C008 /* CC3Kazmath.h */,
+				DA57B56E1BB0FF6B0019C008 /* CC3Logging.h */,
+				DA57B56F1BB0FF6B0019C008 /* CC3Math.h */,
+				DA57B5701BB0FF6B0019C008 /* CC3Math.m */,
+				DA57B5711BB0FF6B0019C008 /* ccTypes.h */,
+				DA57B5641BB0FA0A0019C008 /* SimpleVertex.glsl */,
+				DA57B5661BB0FAA20019C008 /* SimpleFragment.glsl */,
 				DA57B51F1BAEC2080019C008 /* Info.plist */,
 				DA57B5201BAEC2080019C008 /* main.m */,
 			);
@@ -236,8 +279,10 @@
 			files = (
 				DA57B5561BAEE5090019C008 /* movie.mp4 in Resources */,
 				DA57B52A1BAEC2080019C008 /* Main.storyboard in Resources */,
+				DA57B5651BB0FA0A0019C008 /* SimpleVertex.glsl in Resources */,
 				DA57B52F1BAEC2080019C008 /* LaunchScreen.xib in Resources */,
 				DA57B52C1BAEC2080019C008 /* Images.xcassets in Resources */,
+				DA57B5671BB0FAA20019C008 /* SimpleFragment.glsl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,10 +303,15 @@
 				DA57B55C1BB062420019C008 /* MadgwickAHRS.c in Sources */,
 				DA57B5241BAEC2080019C008 /* AppDelegate.m in Sources */,
 				DA57B54C1BAEC6B40019C008 /* BluetoothViewController.m in Sources */,
+				DA57B5751BB0FF6B0019C008 /* CC3Math.m in Sources */,
+				DA57B5731BB0FF6B0019C008 /* CC3GLMatrix.m in Sources */,
 				DA57B5211BAEC2080019C008 /* main.m in Sources */,
 				DA57B5491BAEC6540019C008 /* VideoViewController.m in Sources */,
 				DA57B5461BAEC6320019C008 /* InfoViewController.m in Sources */,
 				DA57B5591BAF74240019C008 /* Sensor.m in Sources */,
+				DA57B5631BB0F1CD0019C008 /* OpenGLView.m in Sources */,
+				DA57B5741BB0FF6B0019C008 /* CC3Kazmath.c in Sources */,
+				DA57B5721BB0FF6B0019C008 /* CC3Foundation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
