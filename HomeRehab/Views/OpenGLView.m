@@ -110,8 +110,7 @@ const GLubyte Indices[] = {
     
     CC3GLMatrix *modelView = [CC3GLMatrix matrix];
     [modelView populateFromTranslation:CC3VectorMake(0, 0, -7)];
-    NSLog(@"y: %f, p: %f, r: %f", _yaw, _pitch, _roll);
-    [modelView rotateBy:CC3VectorMake(_pitch, _roll, _yaw)];
+    [modelView rotateBy:CC3VectorMake(_pitch, _yaw, _roll)];
     glUniformMatrix4fv(_modelViewUniform, 1, 0, modelView.glMatrix);
     
     glViewport(0, 0, self.frame.size.width, self.frame.size.height);

@@ -38,15 +38,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FYP Mini Assigment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yP-Ju-mGi">
-                                <rect key="frame" x="142.5" y="275.5" width="314.5" height="48"/>
+                                <rect key="frame" x="142" y="276" width="314.5" height="48"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="40"/>
                                 <color key="textColor" red="0.80000001192092896" green="0.40000000596046448" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Muhammad Muneer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ze4-Gc-6c3">
+                                <rect key="frame" x="16" y="332" width="568" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="7yP-Ju-mGi" secondAttribute="centerX" id="7tR-bc-ON2"/>
+                            <constraint firstItem="ze4-Gc-6c3" firstAttribute="leading" secondItem="XAf-OE-g38" secondAttribute="leadingMargin" id="OlL-le-0La"/>
+                            <constraint firstItem="ze4-Gc-6c3" firstAttribute="trailing" secondItem="XAf-OE-g38" secondAttribute="trailingMargin" id="UGe-UU-7iZ"/>
+                            <constraint firstItem="ze4-Gc-6c3" firstAttribute="top" secondItem="7yP-Ju-mGi" secondAttribute="bottom" constant="8" id="Zez-u2-13Q"/>
+                            <constraint firstAttribute="centerX" secondItem="ze4-Gc-6c3" secondAttribute="centerX" id="krC-yQ-zLv"/>
                             <constraint firstAttribute="centerY" secondItem="7yP-Ju-mGi" secondAttribute="centerY" id="zRH-pH-o6o"/>
                         </constraints>
                     </view>
